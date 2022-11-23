@@ -1,6 +1,6 @@
-# CommunicationNetwork
+# 4CsNet
 
-The tool will be renamed to 4CsNet. 4CsNet build networks to help understanding code changes and interactions (communication) among contributors.
+4CsNet builds networks to help understanding code changes and interactions (communication) among contributors.
 
 Code changes are the _contribution networks_ and interactions among contributors are the _communication networks_. We use git commit information to build contribution networks wrapped by [GitWrapper](https://github.com/...) and GitHub information to build the communication networks wrapped by [GitHubWrapper](https://github.com/...).
 
