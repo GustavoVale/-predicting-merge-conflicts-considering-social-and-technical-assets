@@ -127,3 +127,18 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# R History file
+**/generating-raw-data/cnf.file
+*.Rhistory
+**/generating-raw-data/CSVs/RQ*
+**/generating-raw-data/.RData
+**/generating-raw-data/CSVs/OLD/
+
+# Python History file
+**/output/
+**data/old/
+
+# locked files
+**/.~lock.**
+./generating-raw-data/CSVs/.goutputstream-W03180
