@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+    <style>
+        body {
+            background-color: #fcfcfc;
+            padding: 8px;
+        }
+
+        h1 {
+            color: #4f4f4f;
+        }
+
+        p,
+        ul,
+        li,
+        a {
+            color: #494a4a;
+        }
+
+        h1 {
+            font-family: "Open Sans";
+            font-size: 40px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 700;
+            line-height: 26.4px;
+        }
+
+        h3 {
+            font-family: "Open Sans";
+            font-size: 14px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 700;
+            line-height: 15.4px;
+        }
+
+        p,
+        ul,
+        li,
+        a {
+            font-family: "Open Sans";
+            font-size: 18px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 400;
+            line-height: 20px;
+        }
+
+        blockquote {
+            font-family: "Open Sans";
+            font-size: 21px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 400;
+            line-height: 30px;
+        }
+
+        pre {
+            font-family: "Open Sans";
+            font-size: 13px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 400;
+            line-height: 18.5714px;
+        }
+
+        li {
+            margin-bottom: 8px
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Machine Learning Techniques</h1>
+
+    <p>
+        We provide a brief description of the two used machine learning techniques as follows:
+    </p>
+    <p> <strong>Decision tree</strong> is a non-parametric supervised algorithm that learns from simple decision rules
+        inferred from the data features.
+    </p>
+    <p> <strong>Random forest</strong> is an ensemble learning method for classification that operates by constructing a
+        multitude of decision trees at
+        training time.
+    </p>
+
+    <h1>Balancing Techniques</h1>
+
+    <p>
+        Below, we briefly describe the seven balancing techniques of our study:
+    </p>
+
+    <p> <strong>Under-sampling</strong> balances the dataset by randomly reducing the size of the majority class until
+        it has the
+        size of the minority class.
+    </p>
+    <p> <strong>Over-sampling</strong> balances the dataset by randomly increasing the size of the minority class until
+        it has the size of the majority class.
+    </p>
+    <p> <strong>Both-sampling</strong> is a mix of under- and over-sampling. It randomly reduces the majority class and
+        increases the minority class until the sample has a
+        size of around the initial majority plus the minority class divided by two.
+    </p>
+    <p> <strong>SMOTE (Synthetic Minority Oversampling Technique)</strong> synthesizes elements for the minority class
+        in the vicinity of already existing elements,
+        similar to over-sampling [1].
+    </p>
+    <p> <strong>BorderlineSmote</strong> is a variant of the original SMOTE algorithm; however, in borderlineSmote,
+        samples will be detected and used to generate new synthetic samples [2].
+    </p>
+    <p> <strong>SVMSmote</strong> is a variant of SMOTE algorithm that use an SVM algorithm to detect samples for
+        generating new synthetic samples [3].
+    </p>
+    <p> <strong>Adasyn (Adaptive Synthetic)</strong> is an algorithm that generates synthetic data. Its greatest
+        advantages are not copying the same minority data and generating more data for “harder to learn”
+        examples. Adasyn is similar to SMOTE, but it generates different samples depending on a local distribution
+        estimation of the oversampled class.
+
+    <h1>References </h1>
+    <p>[1] N. Chawla, K. Bowyer, L. Hall, and W. Kegelmeyer. “SMOTE: Synthetic Minority Over-sampling Technique”.
+        Journal
+        of Artificial Intelligence, 16, pp. 321–357, 2002.
+    </p>
+    <p>[2] H. Han, W. Wen-Yuan, M. Bing-Huan, “Borderline-SMOTE: a new over-sampling method in imbalanced data sets
+        learning”. Advances in Intelligent Computing, pp. 878–887, 2005.
+    </p>
+    <p> [3] H. M. Nguyen, E. W. Cooper, K. Kamei. “Borderline over-sampling for imbalanced data classification”.
+        International Journal of Knowledge Engineering and Soft Data Paradigms, v. 3(1), pp.4–21, 2009.
+    </p>
+</body>
+
+</html>
