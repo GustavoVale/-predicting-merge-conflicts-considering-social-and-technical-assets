@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+    <style>
+        body {
+            background-color: #fcfcfc;
+            padding: 8px;
+        }
+
+        h1 {
+            color: #4f4f4f;
+        }
+
+        p,
+        ul,
+        li,
+        a {
+            color: #494a4a;
+        }
+
+        h1 {
+            font-family: "Open Sans";
+            font-size: 40px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 700;
+            line-height: 26.4px;
+        }
+
+        h3 {
+            font-family: "Open Sans";
+            font-size: 14px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 700;
+            line-height: 15.4px;
+        }
+
+        p,
+        ul,
+        li,
+        a {
+            font-family: "Open Sans";
+            font-size: 18px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 400;
+            line-height: 20px;
+        }
+
+        blockquote {
+            font-family: "Open Sans";
+            font-size: 21px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 400;
+            line-height: 30px;
+        }
+
+        pre {
+            font-family: "Open Sans";
+            font-size: 13px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 400;
+            line-height: 18.5714px;
+        }
+
+        li {
+            margin-bottom: 8px
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Hyper-parameters and tuning values</h1>
+
+    <p>Below, we list the configurable hyper-parameters and tuning values defined in the python script to improve the
+        machine learning analysis. These hyper-parameters and tuning values
+        should be passed in a configuration file. <a
+            href="https://github.com/GustavoVale/predicting-merge-conflicts-considering-social-and-technical-assets/blob/main/ml-analysis-framework/sample_full_options.json">
+            sample_full_options.json</a> is an exemple of configuration file.</p>
+
+    <p><strong>Decision Tree</strong>
+    <ul>
+        <li><i>max_depths</i>: 10, 50, 80, 100, 150, 200</li>
+        <li><i>max_features</i>: "auto","sqrt", "log2</li>
+        <li><i>min_samples_leaves</i>: 1, 2, 3, 5, 10</li>
+        <li><i>min_samples_splits </i>: 2, 3, 5, 10</li>
+        <li><i>criteria</i>: "entropy", "gini"</li>
+        <li><i>splitters</i>: "best", "random"</li>
+    </ul>
+    <p><strong>Random Forest</strong>
+    <ul>
+        <li><i>max_depths</i>: 10, 50, 80, 100, 150, 200</li>
+        <li><i>max_features</i>: "auto","sqrt", "log2</li>
+        <li><i>min_samples_leaves</i>: 1, 2, 3, 5, 10</li>
+        <li><i>min_samples_splits </i>: 2, 3, 5, 10</li>
+        <li><i>n_estimators</i>: 10, 50, 100, 150, 200</li>
+        <li><i>criteria</i>: "entropy", "gini"</li>
+        <li><i>warm_starts</i>: true, false</li>
+    </ul>
+
+</body>
+
+</html>
