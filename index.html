@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+    <style>
+      body {background-color: #fcfcfc; padding: 8px;}
+      h1   {color: #4f4f4f;}
+      p,ul,li,a    {color: #494a4a;}
+      h1 { font-family: "Open Sans"; font-size: 40px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; }
+      h3 { font-family: "Open Sans"; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; } 
+      p,ul,li,a { font-family: "Open Sans"; font-size: 18px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } 
+      blockquote { font-family: "Open Sans"; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } 
+      pre { font-family: "Open Sans"; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px; }
+      li {margin-bottom:8px }
+   </style>
+  </head>
+  
+  <body>
+
+    <h1>Predicting Merge Conflicts Considering Social and Technical Assets</h1>
+
+    <p> 
+      <strong>Abstract</strong> — 
+      Concurrent contributions to a code base may introduce merge conflicts. 
+      Whereas merge conflicts are easy and common to introduce, resolving them is a difficult, time-consuming, and often error-prone task. 
+      Previous research concentrated on the emergence of merge conflicts considering technical assets in their analyses and often ignored the social perspective (e.g., developer roles). 
+      Our goal is to understand and predict merge conflicts considering social and technical assets.
+      We devise three models for predicting merge conflicts based on common measures used by developers. 
+      The first model focus on the social assets, the second on technical assets, and the third on technical and social assets. 
+      To evaluate our predictors, we report on a large-scale empirical study analyzing the histories of 66 real-world software systems. 
+      Specifically, we categorize developers into \textit{top} or \textit{occasional} contributors at project and merge-scenario level.
+      We found that top contributors at project level and occasional contributors at merge-scenario level cause more merge conflicts than the other roles. 
+      Hence, the coordination of top contributors at project level and occasional contributors at merge-scenario level is a good starting point to minimize the occurrence of merge conflicts (especially because when these two developers work on the source branch, the chances of merge conflicts are 32.31\%). 
+      Overall, we show that predicting merge conflicts incorporating developer roles is possible in practice with high accuracy (0.92) and recall (1.00) in the best case, which is vital information to guide improvements on speculative merging techniques. 
+   </p>
+
+  <h1>Info</h1>
+
+  <p>This page provides supplementary information for paper: `Predicting Merge Conflicts Considering Social and Technical Assets` submitted to the XXX Journal.</p>
+
+  <p>In the links below you find:<p/>
+
+  <ul>
+    
+    <li>Complementary information</li>
+      <ul>
+        <li><a href="TODO">Projects Overview</a></li>        
+        <li><a href="TODO">Machine Learning Techniques Description </a></li>
+        <li><a href="TODO">Balancing Techniques Description </a></li>
+        <li><a href="TODO">Hyper-parameters and Tuning Values</a></li>
+      </ul>
+    
+    <li>Framework and Scripts</li>
+      <ul>
+        <li><a href="TODO">Data Collection Framework</a></li>
+        <li><a href="TODO">R scripts to collect data from database and process data (e.g., developer's role classification, results RQ1 and RQ2)</a></li>
+        <li><a href="TODO">Python scripts for implementing machine learning techniques and treat input data (e.g., balancing data)</a></li>
+      </ul>
+    <li> Input Data</li>
+      <ul>
+        <li><a href="TODO">Merge Scenarios</a></li>
+        <li><a href="TODO">Developers List</a></li>
+        <li><a href="TODO">Social measures input data for each balancing technique</a></li>
+        <li><a href="TODO">Technical measures input data for each balancing technique</a></li>
+        <li><a href="TODO">All measures input data for each balancing technique</a></li>
+      </ul>
+    <li>Results</li>
+      <ul>
+        <li><a href="TODO">Results for RQ1</a></li>        
+        <li><a href="TODO">Results for RQ2 </a></li>
+        <li><a href="TODO">Results for machine learning model using social measures</a></li>
+        <li><a href="TODO">Results for machine learning model using technical measures</a></li>
+        <li><a href="TODO">Results for machine learning model using social and technical measures</a></li>
+      </ul>
+  </ul>
+
+  </body>
+</html>
