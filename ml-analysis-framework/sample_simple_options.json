@@ -1,0 +1,93 @@
+{
+    "data_types": ["social"],
+    "balancing_techniques": ["Under"],
+    "classifiers": ["DNN_MLP", "GRU_SEQ", "LSTM_MLP"],
+    "Decision_tree": {
+        "max_depths": [80],
+        "max_features": ["auto"],
+        "min_samples_leaves": [3],
+        "min_samples_splits": [2],
+        "criteria": ["entropy"],
+        "splitters": ["best"]
+    },
+    "Random_forest": {
+        "max_depths": [80],
+        "max_features": ["auto"],
+        "min_samples_leaves": [3],
+        "min_samples_splits": [2],
+        "n_estimators": [90],
+        "criteria": ["entropy"],
+        "warm_starts": [true, false]
+    },
+    "KNN": {
+        "n_neighbors": [5],
+        "weights": ["distance"],
+        "metrics": ["manhattan"],
+        "algorithms": ["auto"]
+    },
+    "SVM": {
+        "cs": [1.0],
+        "kernels": ["linear"],
+        "gammas": ["auto"],
+        "probabilities": [false],
+        "decision_function_shapes": ["ovr"]
+    },
+    "DNN_MLP": {
+        "learning_rates": [0.0001],
+        "dropout_rates": [0.045],
+        "neurons_denses": [191],
+        "hidden_layers": [3],
+        "epochs": [73],
+        "batch_sizes": [20],
+        "activations": ["relu"]
+    },
+    "DNN_SEQ": {
+        "learning_rates": [0.0001],
+        "dropout_rates": [0.045],
+        "neurons_denses": [191],
+        "hidden_layers": [3],
+        "epochs": [73],
+        "batch_sizes": [20],
+        "activations": ["relu"]
+    },
+    "LSTM_MLP":{
+        "learning_rates": [0.0001],
+        "dropout_rates": [0.045],
+        "units": [3],
+        "neurons_denses": [191],
+        "hidden_layers": [3],
+        "epochs": [73],
+        "batch_sizes": [20],
+        "activations": ["relu"]
+    },
+    "LSTM_SEQ":{
+        "learning_rates": [0.0001],
+        "dropout_rates": [0.045],
+        "units": [3],
+        "neurons_denses": [191],
+        "hidden_layers": [3],
+        "epochs": [73],
+        "batch_sizes": [20],
+        "activations": ["relu"]
+    },
+    "GRU_MLP":{
+        "learning_rates": [0.0001],
+        "dropout_rates": [0.045],
+        "units": [3],
+        "neurons_denses": [191],
+        "hidden_layers": [3],
+        "epochs": [73],
+        "batch_sizes": [20],
+        "activations": ["relu"]
+    },
+    "GRU_SEQ":{
+        "learning_rates": [0.0001],
+        "dropout_rates": [0.045],
+        "units": [3],
+        "neurons_denses": [191],
+        "hidden_layers": [3],
+        "epochs": [73],
+        "batch_sizes": [20],
+        "activations": ["relu"]
+    }
+}

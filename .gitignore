@@ -136,7 +136,6 @@ dmypy.json
 **/generating-raw-data/CSVs/OLD/
 
 # Python History file
-**/output/
 **data/old/
 
 # locked files
