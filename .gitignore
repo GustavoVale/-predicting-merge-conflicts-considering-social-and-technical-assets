@@ -141,3 +141,4 @@ dmypy.json
 # locked files
 **/.~lock.**
 ./generating-raw-data/CSVs/.goutputstream-W03180
+.Rproj.user
