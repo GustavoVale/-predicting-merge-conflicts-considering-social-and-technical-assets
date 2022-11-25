@@ -85,10 +85,13 @@
         inferred from the data features.
     </p>
     <p> <strong>Random forest</strong> is an ensemble learning method for classification that operates by constructing a
-        multitude of decision trees at
-        training time.
+        multitude of decision trees at training time.
     </p>
 
+    <p> <strong>KNN (k-nearest neighbors algorithm)</strong> is a non-parametric supervised learning method. The input
+        consists of the k closest training examples in a data set.
+    </p>
+    
     <h1>Balancing Techniques</h1>
 
     <p>
@@ -96,19 +99,17 @@
     </p>
 
     <p> <strong>Under-sampling</strong> balances the dataset by randomly reducing the size of the majority class until
-        it has the
-        size of the minority class.
+        it has the size of the minority class.
     </p>
     <p> <strong>Over-sampling</strong> balances the dataset by randomly increasing the size of the minority class until
         it has the size of the majority class.
     </p>
     <p> <strong>Both-sampling</strong> is a mix of under- and over-sampling. It randomly reduces the majority class and
-        increases the minority class until the sample has a
-        size of around the initial majority plus the minority class divided by two.
+        increases the minority class until the sample has a size of around the initial majority plus the minority class
+        divided by two.
     </p>
     <p> <strong>SMOTE (Synthetic Minority Oversampling Technique)</strong> synthesizes elements for the minority class
-        in the vicinity of already existing elements,
-        similar to over-sampling [1].
+        in the vicinity of already existing elements, similar to over-sampling [1].
     </p>
     <p> <strong>BorderlineSmote</strong> is a variant of the original SMOTE algorithm; however, in borderlineSmote,
         samples will be detected and used to generate new synthetic samples [2].
@@ -123,8 +124,7 @@
 
     <h1>References </h1>
     <p>[1] N. Chawla, K. Bowyer, L. Hall, and W. Kegelmeyer. “SMOTE: Synthetic Minority Over-sampling Technique”.
-        Journal
-        of Artificial Intelligence, 16, pp. 321–357, 2002.
+        Journal of Artificial Intelligence, 16, pp. 321–357, 2002.
     </p>
     <p>[2] H. Han, W. Wen-Yuan, M. Bing-Huan, “Borderline-SMOTE: a new over-sampling method in imbalanced data sets
         learning”. Advances in Intelligent Computing, pp. 878–887, 2005.

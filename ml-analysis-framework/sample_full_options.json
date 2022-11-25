@@ -20,7 +20,7 @@
         "warm_starts": [true, false]
     },
     "KNN": {
-        "n_neighbors": [5, 7],
+        "n_neighbors": [1, 3, 10, 20, 50, 75, 100, 150, 200, 300],
         "weights": ["distance", "uniform"],
         "metrics": ["manhattan", "minkowski"],
         "algorithms": ["auto", "ball_tree", "kd_tree", "brute"]
