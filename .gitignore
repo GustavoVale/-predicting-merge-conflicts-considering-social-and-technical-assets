@@ -142,3 +142,7 @@ dmypy.json
 **/.~lock.**
 ./generating-raw-data/CSVs/.goutputstream-W03180
 .Rproj.user
+
+manual-analysis-framework/data/
+manual-analysis-framework/figures/
+manual-analysis-framework/02_digested_results.txt
