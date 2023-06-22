@@ -19,7 +19,6 @@ def get_unique_files_map_with_occurrence(df, column_name='filepath'):
     for i in range(0, len(df[column_name])):
         key = df[column_name][i]
         has_conflict = df['has_conflict'][i]
-        print(has_conflict)
         if key not in map:
             map[key] = [1, has_conflict]
         else:
@@ -59,7 +58,7 @@ save_df_with_unique_files_occurrence('data/01_conflicting_ms_sample.csv',
 # TODO: Change the second filepath to the real one when we have it AND cross-check the column names
 save_df_with_unique_files_occurrence('data/01_safe_ms_sample.csv',
                                      'data/01_safe_ms_sample.csv',
-                                     'data/04_file_occ_conf.csv',
+                                     'data/04_file_occ_safe.csv',
                                      'ms_id',
                                      'ms_id',
                                      'filepath')
