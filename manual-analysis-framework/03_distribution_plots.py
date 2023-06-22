@@ -4,8 +4,6 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 
-# sns.set(style="darkgrid")
-
 conflicting_ms_sample = pd.read_csv(r'data/01_conflicting_ms_sample.csv')
 safe_ms_sample = pd.read_csv(r'data/01_safe_ms_sample.csv')
 
