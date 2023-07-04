@@ -13,8 +13,8 @@ def save_sample_df(df, sample_size, is_conflicting, filepath):
 
 # For conflicting scenarios
 conflicting_ms_sample = save_sample_df(
-    df, 200, 1, 'data/01_conflicting_ms_sample.csv')
+    df, 3950, 1, 'data/01_conflicting_ms_sample.csv')
 
 # For safe scenarios
 conflicting_ms_sample = save_sample_df(
-    df, 200, 0, 'data/01_safe_ms_sample.csv')
+    df, 3950, 0, 'data/01_safe_ms_sample.csv')

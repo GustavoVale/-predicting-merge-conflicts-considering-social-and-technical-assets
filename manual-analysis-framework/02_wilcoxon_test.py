@@ -14,4 +14,4 @@ for col in ms_columns:
     result = stats.wilcoxon(conflicting_ms_sample[col], safe_ms_sample[col])
     df.loc[len(df.index)] = [col, result[0], result[1]]
 
-df.to_csv('02_wilcoxon_test.csv')
+df.to_csv('data/02_wilcoxon_test.csv')

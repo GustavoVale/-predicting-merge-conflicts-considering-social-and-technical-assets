@@ -6,18 +6,21 @@ import pandas as pd
 # Get matched merge scenarios from random sample:
 
 
-def clean_df_file_names(df_sample_name, df_file_names, column_sample_name='ms_id', column_files_name='ms_id'):
-    df_sample = pd.read_csv(df_sample_name)
-    df_files = pd.read_csv(df_file_names)
+def clean_df_chunk_names(df_conf_sample_name, df_safe_sample_name, df_chunk_names, column_sample_name='ms_id', column_files_name='ms_id'):
+    df_conf_sample = pd.read_csv(df_conf_sample_name)
+    df_safe_sample = pd.read_csv(df_safe_sample_name)
+    # Merge sample merge scenarios
+    df_sample = pd.concat([df_conf_sample, df_safe_sample])
+    df_chunks = pd.read_csv(df_chunk_names)
     # It keeps the structure we got from the df_file_names
-    df = df_files[df_files[column_files_name].isin(
+    df = df_chunks[df_chunks[column_files_name].isin(
         df_sample[column_sample_name])]
     return df
 
 
 def get_unique_ms_map_with_chunk_masures(df, column_name='ms_id'):
     map = {}
-    for i in range(0, len(df[column_name])):
+    for i, row in df.iterrows():
         key = df[column_name][i]
         begin = df['begin_line'][i]
         end = df['end_line'][i]
@@ -43,10 +46,17 @@ def create_df_from_map(map):
     df = pd.DataFrame(columns=['ms_id', 'n_chunks', 'n_conf_chunks', 'loc_conf',
                       'loc_safe', 'avg_loc_chunks', 'avg_loc_conf_chunks', 'avg_loc_safe_chunks'])
     for key, value in map.items():
-        avg_loc_chunks = (value[2] + value[3]) / value[0]
-        avg_loc_conf_chunks = (value[2]) / value[1]
-        avg_loc_safe_chunks = value[3] / (value[0] - value[1])
-        df.loc[len(df.index)] = [key, value[0], value[1], value[2], value[3],
+        n_chunks = value[0]
+        n_conf_chunks = value[1]
+        loc_conf = value[2]
+        loc_safe = value[3]
+        avg_loc_chunks = 0 if n_chunks <= 0 else (
+            loc_conf + loc_safe) / n_chunks
+        avg_loc_conf_chunks = 0 if n_conf_chunks <= 0 else (
+            loc_conf) / n_conf_chunks
+        avg_loc_safe_chunks = 0 if n_chunks - \
+            n_conf_chunks <= 0 else loc_safe / (n_chunks - n_conf_chunks)
+        df.loc[len(df.index)] = [key, n_chunks, n_conf_chunks, loc_conf, loc_safe,
                                  avg_loc_chunks, avg_loc_conf_chunks, avg_loc_safe_chunks]
     return df
 
@@ -56,11 +66,15 @@ def save_df_with_chunk_measures(df, path_to_save):
     final_df = create_df_from_map(map)
     final_df.to_csv(path_to_save)
 
+# HERE THE CALLS TO CREATED METHODS STARTS
 
-df = clean_df_file_names('data/01_conflicting_ms_sample.csv',
-                         'data/01_conflicting_ms_sample.csv',
-                         'ms_id',
-                         'ms_id')
+
+# TODO: CHANGE THE SECOND ARGUMENT
+df = clean_df_chunk_names('data/01_conflicting_ms_sample.csv',
+                          'data/01_safe_ms_sample.csv',
+                          'data/query_chunks.csv',
+                          'ms_id',
+                          'ms_id')
 
 df_conflicting = df.loc[df['has_conflict'] == 1]
 df_safe = df.loc[df['has_conflict'] == 0]

@@ -146,3 +146,5 @@ dmypy.json
 manual-analysis-framework/data/
 manual-analysis-framework/figures/
 manual-analysis-framework/02_digested_results.txt
+manual-analysis-framework/04_digested_results.csv
+

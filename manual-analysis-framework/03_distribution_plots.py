@@ -9,8 +9,8 @@ safe_ms_sample = pd.read_csv(r'data/01_safe_ms_sample.csv')
 
 df = pd.concat([conflicting_ms_sample, safe_ms_sample])
 
-ms_columns = ['top_proj', 'top_proj_target', 'top_proj_source', 'occ_proj', 'occ_proj_target', 'occ_proj_source', 'top_ms', 'top_ms_target', 'top_ms_source', 'occ_ms', 'occ_ms_target', 'occ_ms_source', 'devs', 'devs_target',
-              'devs_source', 'devs_both', 'files', 'files_target', 'files_source', 'files_both', 'chunks', 'chunks_target', 'chunks_source', 'loc', 'loc_target', 'loc_source', 'commits', 'commits_target', 'commits_source', 'commits_source']
+ms_columns = ['top_proj', 'top_proj_target', 'top_proj_source', 'occ_proj', 'occ_proj', 'occ_proj_target', 'occ_proj_source', 'top_ms', 'top_ms_target', 'top_ms_source', 'occ_ms', 'occ_ms_target', 'occ_ms_source', 'devs', 'devs_target',
+              'devs_source', 'devs_both', 'files', 'files_target', 'files_source', 'files_both', 'chunks', 'chunks_target', 'chunks_source', 'loc', 'loc_target', 'loc_source', 'commits', 'commits_target', 'commits_source']
 
 
 def generate_graph(num_rows, num_cols, ms_columns):
@@ -34,7 +34,7 @@ def generate_graph(num_rows, num_cols, ms_columns):
 
     fig.suptitle("Violin Plotting")
     fig.subplots_adjust(hspace=0.4)
-    plt.savefig('figures/03-plots.png')
+    plt.savefig('figures/03_plots.png')
     plt.show()
 
 
