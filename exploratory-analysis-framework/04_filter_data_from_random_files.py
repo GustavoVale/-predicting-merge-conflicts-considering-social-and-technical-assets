@@ -34,7 +34,8 @@ def get_unique_files_map_with_occurrence(df, column_name='filepath'):
 
 
 def create_df_from_map(map):
-    df = pd.DataFrame(columns=['file', 'occ', 'occ_conflicts', 'avg_conflicts'])
+    df = pd.DataFrame(
+        columns=['file', 'occ', 'occ_conflicts', 'avg_conflicts'])
     for key, value in map.items():
         df.loc[len(df.index)] = [key, value[0], value[1], value[1]/value[0]]
     return df
@@ -53,7 +54,6 @@ def save_df_with_unique_files_occurrence(df_conf_sample, df_safe_sample, df_file
 
 
 # Call created methods and save into a csv file
-# TODO: Change the second filepath to the real one when we have it AND cross-check the column names
 save_df_with_unique_files_occurrence('data/01_conflicting_ms_sample.csv',
                                      'data/01_safe_ms_sample.csv',
                                      'data/query_files.csv',

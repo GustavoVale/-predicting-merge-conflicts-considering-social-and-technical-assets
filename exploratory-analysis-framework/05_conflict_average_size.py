@@ -79,7 +79,7 @@ df = clean_df_chunk_names('data/01_conflicting_ms_sample.csv',
 df_conflicting = df.loc[df['has_conflict'] == 1]
 df_safe = df.loc[df['has_conflict'] == 0]
 
-df_conflicting.describe().to_csv('data/05_conflict_statistics.csv')
-df_safe.describe().to_csv('data/05_safe_statistics.csv')
+# df_conflicting.describe().to_csv('data/05_conflict_statistics.csv')
+# df_safe.describe().to_csv('data/05_safe_statistics.csv')
 
 save_df_with_chunk_measures(df, 'data/05_general_statistics.csv')

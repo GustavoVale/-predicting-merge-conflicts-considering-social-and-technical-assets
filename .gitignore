@@ -143,7 +143,9 @@ dmypy.json
 ./generating-raw-data/CSVs/.goutputstream-W03180
 .Rproj.user
 
-exploratory-analysis-framework/data/
+exploratory-analysis-framework/data/OLD/
+exploratory-analysis-framework/data/query_files.csv
+exploratory-analysis-framework/data/query_chunks.csv
 exploratory-analysis-framework/figures/
 exploratory-analysis-framework/02_digested_results.txt
 exploratory-analysis-framework/04_digested_results.csv
